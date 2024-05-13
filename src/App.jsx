@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import Nav from './Nav';
-import HelloSection from './HelloSection';
+import ResumeSection from './ResumeSection';
 import AboutMeSection from './AboutMeSection';
-import WorkSection from './WorkSection';
+import ProjectSection from './ProjectSection';
 import ContactSection from './ContactSection';
 import Footer from './Footer';
 import './index.css'
@@ -20,10 +20,10 @@ const App = () => {
       <Header handleNavClick={handleNavClick} />
       <Nav handleNavClick={handleNavClick} />
       <main>
-        {activeSection === 'hello' && <HelloSection />}
         {activeSection === 'aboutMe' && <AboutMeSection />}
-        {activeSection === 'work' && <WorkSection />}
+        {activeSection === 'work' && <ProjectSection />}
         {activeSection === 'contact' && <ContactSection />}
+        {activeSection === 'hello' && <ResumeSection />}
       </main>
       <Footer />
     </div>
