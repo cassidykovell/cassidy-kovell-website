@@ -1,0 +1,107 @@
+* {
+    background-color: rgb(249, 249, 225);
+    color: red;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  #nav-bar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  ul {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  li {
+    padding: 1em;
+  }
+  
+  .noline:link {
+      text-decoration: none;
+  }
+  
+  #hello {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h2 {
+    font-size: 7em;
+    transform: scaleY(1.5); 
+    padding-top: .5em;
+  }
+  
+  #title {
+      font-size: 1.1em;
+     padding-bottom: 2em; 
+  }
+  
+  h3 {
+      font-size: 3em;
+      padding-left: 1em;
+      border-bottom: 5px solid red;
+  }
+  
+  .content {
+      padding: 0em 1em 0em 15em;
+      font-size: 1.3em;
+      line-height: 1.5; 
+  }
+  
+  img {
+      height: 300px;
+      width: 500px;
+      border-radius: 15px;
+  }
+  
+  #deployed {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+  
+  #info {
+      font-size: .6em;
+      text-transform: uppercase;
+  }
+  
+  #contact {
+      font-size: 1.2em;
+  }
+  
+  a:link {
+      color: inherit; 
+  }
+  
+  a:visited {
+      color: inherit; 
+  }
+  
+  @media (max-width: 1024px){
+     img {
+      width: 300px;
+      height: 200px;
+     }
+  
+     #contact {
+      font-size: .9em;
+     }
+  }
+  
+  @media (max-width: 1024px){
+      img {
+       width: 300px;
+       height: 200px;
+      }
+   
+      #contact {
+       font-size: .6em;
+      }
+   }

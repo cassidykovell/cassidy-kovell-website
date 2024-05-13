@@ -6,6 +6,7 @@ import AboutMeSection from './AboutMeSection';
 import WorkSection from './WorkSection';
 import ContactSection from './ContactSection';
 import Footer from './Footer';
+import './index.css'
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('aboutMe'); 
