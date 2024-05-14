@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import Header from './Header';
-import Nav from './Nav';
-import ResumeSection from './ResumeSection';
-import AboutMeSection from './AboutMeSection';
-import ProjectSection from './ProjectSection';
-import ContactSection from './ContactSection';
-import Footer from './Footer';
+import Header from './components/Header';
+import Nav from './components/Nav';
+import ResumeSection from './components/ResumeSection';
+import AboutMeSection from './components/AboutMeSection';
+import ProjectSection from './components/ProjectSection';
+import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
 import './index.css';
 
 const App = () => {
