@@ -1,7 +1,5 @@
 import React from 'react';
 
-import React from 'react';
-
 const Resume = () => {
   return (
     <div className="resume-container">

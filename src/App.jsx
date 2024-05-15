@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Nav from './components/Nav';
-import ResumeSection from './components/ResumeSection';
-import AboutMeSection from './components/AboutMeSection';
-import ProjectSection from './components/ProjectSection';
-import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import { Outlet } from 'react-router-dom';
 import './index.css';
 
 const App = () => {
@@ -18,16 +15,16 @@ const App = () => {
   return (
     <div>
       <Header />
-      <Nav handleNavClick={handleNavClick} /> 
       <main>
         <section id="hello">
           <h2>Cassidy Kovell</h2>
           <p id="title">Full Stack Web Developer.</p>
         </section>
-        {activeSection === 'aboutMe' && <AboutMeSection />}
+        {/* {activeSection === 'aboutMe' && <AboutMeSection />}
         {activeSection === 'work' && <ProjectSection />}
         {activeSection === 'contact' && <ContactSection />}
-        {activeSection === 'hello' && <ResumeSection />}
+        {activeSection === 'hello' && <ResumeSection />} */}
+        <Outlet />
       </main>
       <Footer />
     </div>
