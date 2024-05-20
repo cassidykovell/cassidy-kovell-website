@@ -1,28 +1,50 @@
 import React from 'react';
+import project1Image from '../assets/images/project1.png';
 
 const ProjectsSection = () => {
+    const projects = [
+        {
+            title: 'Flash Me!',
+            deployedLink: 'https://flash-me-8481dc8f6f3f.herokuapp.com/',
+            githubLink: 'https://github.com/cassidykovell/flash-me',
+            imageSrc: project1Image,
+        },
+    ];
+
+    const handleMouseEnter = (index) => {
+        const titleElement = document.getElementById(`title-${index}`);
+        const githubIcon = document.getElementById(`github-${index}`);
+        titleElement.style.display = 'block';
+        githubIcon.style.display = 'block';
+    };
+
+    const handleMouseLeave = (index) => {
+        const titleElement = document.getElementById(`title-${index}`);
+        const githubIcon = document.getElementById(`github-${index}`);
+        titleElement.style.display = 'none';
+        githubIcon.style.display = 'none';
+    };
+
     return (
-      <section id="section2">
-        <h3>Projects</h3>
-        <div className="content" id="deployed">
-          <a href="https://flash-me-8481dc8f6f3f.herokuapp.com/" target="_blank">
-            <img src="./assets/images/FM.png" alt="Flash Me Project" />
-          </a>
-          <a href="https://cassidykovell.github.io/date-night/" target="_blank">
-            <img src="./assets/images/DNG.png" alt="Date Night Project" />
-          </a>
-          <a href="https://cassidykovell.github.io/weather-website/" target="_blank">
-            <img src="./assets/images/WD.png" alt="Weather Website Project" />
-          </a>
-          <a href="https://cassidykovell.github.io/daily-planner/" target="_blank">
-            <img src="./assets/images/WDS.png" alt="Daily Planner Project" />
-          </a>
-          <p id="info">
-            Click on any of the photos to view the full application and check out my GitHub to view my backend applications and command-line tools!
-          </p>
-        </div>
-      </section>
+        <section id="section2">
+            <h3>Projects</h3>
+            <div className="content" id="deployed">
+                {projects.map((project, index) => (
+                    <div key={index} className="project-item" onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={() => handleMouseLeave(index)}>
+                        <a href={project.deployedLink} target="_blank">
+                            <img src={project.imageSrc.default} alt={project.title} />
+                        </a>
+                        <p className="project-title" id={`title-${index}`}>
+                            <a href={project.deployedLink} target="_blank">{project.title}</a>
+                        </p>
+                        <a href={project.githubLink} target="_blank" className="github-icon" id={`github-${index}`}>
+                            <i className="fab fa-github"></i>
+                        </a>
+                    </div>
+                ))}
+            </div>
+        </section>
     );
-  };
-  
-  export default ProjectsSection;
+};
+
+export default ProjectsSection;
