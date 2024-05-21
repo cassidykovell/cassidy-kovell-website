@@ -1,5 +1,5 @@
 import React from 'react';
-import project1Image from '../assets/images/project1.png';
+import project1 from '../assets/images/project1.png';
 
 const ProjectsSection = () => {
     const projects = [
@@ -7,7 +7,7 @@ const ProjectsSection = () => {
             title: 'Flash Me!',
             deployedLink: 'https://flash-me-8481dc8f6f3f.herokuapp.com/',
             githubLink: 'https://github.com/cassidykovell/flash-me',
-            imageSrc: project1Image,
+            imageSrc: project1,
         },
     ];
 
