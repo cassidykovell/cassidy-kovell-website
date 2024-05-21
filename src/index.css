@@ -131,6 +131,16 @@ button:hover {
   margin-top: 5px;
 }
 
+#list {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.2em;
+}
+
+.resume {
+  padding-left: 2em;
+  font-size: 1.5rem;
+}
 
 @media (max-width: 1024px) {
   img {
