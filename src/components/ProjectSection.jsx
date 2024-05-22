@@ -7,7 +7,7 @@ import project5 from '../assets/images/project5.png';
 import project6 from '../assets/images/project6.png';
 
 const ProjectsSection = () => {
-    const projects =  [
+    const projects = [
         {
             title: 'Flash Me!',
             deployedLink: 'https://flash-me-8481dc8f6f3f.herokuapp.com/',
@@ -43,8 +43,8 @@ const ProjectsSection = () => {
             deployedLink: 'https://cassidykovell.github.io/css-cheatsheet/',
             githubLink: 'https://github.com/cassidykovell/css-cheatsheet',
             imageSrc: project6,
-        },];
-
+        },
+    ];
 
     const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
 
@@ -59,21 +59,27 @@ const ProjectsSection = () => {
     return (
         <section id="section2">
             <h3>Projects</h3>
-            <div className="content" id="deployed">
+            <div className="content">
                 <div className="project-slideshow">
                     <div className="project-item">
                         <a href={projects[currentProjectIndex].deployedLink} target="_blank">
-                            <img src={projects[currentProjectIndex].imageSrc} alt={projects[currentProjectIndex].title} />
-                        </a>
-                        <p className="project-title">
-                            <a href={projects[currentProjectIndex].deployedLink} target="_blank">{projects[currentProjectIndex].title}</a>
-                        </p>
-                        <a href={projects[currentProjectIndex].githubLink} target="_blank" className="github-icon">
-                            <i className="fab fa-github"></i>
+                            <div className="image-container">
+                                <img className="img" src={projects[currentProjectIndex].imageSrc} alt={projects[currentProjectIndex].title} />
+                                <div className="image-overlay">
+                                    <p className="project-title">
+                                        <a href={projects[currentProjectIndex].deployedLink} target="_blank">{projects[currentProjectIndex].title}</a>
+                                    </p>
+                                    <a href={projects[currentProjectIndex].githubLink} target="_blank" className="github-icon">
+                                        <i className="fab fa-github" style={{ fontSize: "2.5rem" }}></i>
+                                    </a>
+                                </div>
+                            </div>
                         </a>
                     </div>
-                    <button onClick={goToPreviousProject} className="prev-button">Prev</button>
-                    <button onClick={goToNextProject} className="next-button">Next</button>
+                    <div id="buttons">
+                        <button onClick={goToPreviousProject} className="prev-button">Prev</button>
+                        <button onClick={goToNextProject} className="next-button">Next</button>
+                    </div>
                 </div>
             </div>
         </section>
