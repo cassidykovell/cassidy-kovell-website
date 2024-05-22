@@ -66,12 +66,6 @@ img {
   border-radius: 15px;
 }
 
-#deployed {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
 #info {
   font-size: 0.6em;
   text-transform: uppercase;

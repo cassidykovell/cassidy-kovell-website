@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import project1 from '../assets/images/project1.png';
 import project2 from '../assets/images/project2.png';
 import project3 from '../assets/images/project3.png';
@@ -7,7 +7,7 @@ import project5 from '../assets/images/project5.png';
 import project6 from '../assets/images/project6.png';
 
 const ProjectsSection = () => {
-    const projects = [
+    const projects =  [
         {
             title: 'Flash Me!',
             deployedLink: 'https://flash-me-8481dc8f6f3f.herokuapp.com/',
@@ -43,40 +43,38 @@ const ProjectsSection = () => {
             deployedLink: 'https://cassidykovell.github.io/css-cheatsheet/',
             githubLink: 'https://github.com/cassidykovell/css-cheatsheet',
             imageSrc: project6,
-        },
-    ];
+        },];
 
-    const handleMouseEnter = (index) => {
-        const titleElement = document.getElementById(`title-${index}`);
-        const githubIcon = document.getElementById(`github-${index}`);
-        titleElement.style.display = 'block';
-        githubIcon.style.display = 'block';
+
+    const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+
+    const goToPreviousProject = () => {
+        setCurrentProjectIndex((prevIndex) => (prevIndex === 0 ? projects.length - 1 : prevIndex - 1));
     };
 
-    const handleMouseLeave = (index) => {
-        const titleElement = document.getElementById(`title-${index}`);
-        const githubIcon = document.getElementById(`github-${index}`);
-        titleElement.style.display = 'none';
-        githubIcon.style.display = 'none';
+    const goToNextProject = () => {
+        setCurrentProjectIndex((prevIndex) => (prevIndex === projects.length - 1 ? 0 : prevIndex + 1));
     };
 
     return (
         <section id="section2">
             <h3>Projects</h3>
             <div className="content" id="deployed">
-                {projects.map((project, index) => (
-                    <div key={index} className="project-item" onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={() => handleMouseLeave(index)}>
-                        <a href={project.deployedLink} target="_blank">
-                            <img src={project.imageSrc} alt={project.title} />
+                <div className="project-slideshow">
+                    <div className="project-item">
+                        <a href={projects[currentProjectIndex].deployedLink} target="_blank">
+                            <img src={projects[currentProjectIndex].imageSrc} alt={projects[currentProjectIndex].title} />
                         </a>
-                        <p className="project-title" id={`title-${index}`}>
-                            <a href={project.deployedLink} target="_blank">{project.title}</a>
+                        <p className="project-title">
+                            <a href={projects[currentProjectIndex].deployedLink} target="_blank">{projects[currentProjectIndex].title}</a>
                         </p>
-                        <a href={project.githubLink} target="_blank" className="github-icon" id={`github-${index}`}>
+                        <a href={projects[currentProjectIndex].githubLink} target="_blank" className="github-icon">
                             <i className="fab fa-github"></i>
                         </a>
                     </div>
-                ))}
+                    <button onClick={goToPreviousProject} className="prev-button">Prev</button>
+                    <button onClick={goToNextProject} className="next-button">Next</button>
+                </div>
             </div>
         </section>
     );

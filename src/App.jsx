@@ -20,10 +20,6 @@ const App = () => {
           <h2>Cassidy Kovell</h2>
           <p id="title">Full Stack Web Developer.</p>
         </section>
-        {/* {activeSection === 'aboutMe' && <AboutMeSection />}
-        {activeSection === 'work' && <ProjectSection />}
-        {activeSection === 'contact' && <ContactSection />}
-        {activeSection === 'hello' && <ResumeSection />} */}
         <Outlet />
       </main>
       <Footer />
