@@ -41,19 +41,32 @@ const Resume = () => {
           <li>JavaScript ES6+</li>
           <li>CSS3</li>
           <li>Bootstrap</li>
+          <li>Python</li>
           <li>HTML5</li>
           <li>SQL</li>
           <li>NoSQL</li>
+          <li>Object-Relational Mapping</li>
           <li>MongoDB</li>
+          <li>Mongoose ODM</li>
           <li>Node.js</li>
-          <li>Express</li>
+          <li>Express.js</li>
+          <li>Object Oriented Programming</li>
+          <li>Progressive Web Applications</li>
+          <li>MERN</li>
+          <li>State</li>
+          <li>Web APIs</li>
+          <li>Third Party APIs</li>
+          <li>Server-Side APIs</li>
+           <li>GraphQL</li>
+          <li>Webpack</li>
+          <li>React</li>
+         <li>GraphQL API</li>
           <li>Jest</li>
           <li>GitHub</li>
+          <li>Git</li>
           <li>Bash</li>
+          <li>JQuery</li>
           <li>Visual Studio Code</li>
-          <li>APIs</li>
-          <li>GraphQL</li>
-          <li>Webpack</li>
           <li>Jest</li>
           <li>Vite</li>
         </ul>

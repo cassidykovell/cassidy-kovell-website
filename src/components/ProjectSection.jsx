@@ -5,6 +5,7 @@ import project3 from '../assets/images/project3.png';
 import project4 from '../assets/images/project4.png';
 import project5 from '../assets/images/project5.png';
 import project6 from '../assets/images/project6.png';
+import project7 from '../assets/images/project7.png';
 
 const ProjectsSection = () => {
     const projects = [
@@ -13,6 +14,12 @@ const ProjectsSection = () => {
             deployedLink: 'https://flash-me-8481dc8f6f3f.herokuapp.com/',
             githubLink: 'https://github.com/cassidykovell/flash-me',
             imageSrc: project1,
+        },
+        {
+            title: "With What's In The Fridge",
+            deployedLink: 'https://with-whats-in-the-fridge.onrender.com/',
+            githubLink: 'https://github.com/cassidykovell/with-whats-in-the-fridge',
+            imageSrc: project7,
         },
         {
             title: 'Date Night Generator',
@@ -67,10 +74,10 @@ const ProjectsSection = () => {
                                 <img className="img" src={projects[currentProjectIndex].imageSrc} alt={projects[currentProjectIndex].title} />
                                 <div className="image-overlay">
                                     <p className="project-title">
-                                        <a href={projects[currentProjectIndex].deployedLink} target="_blank">{projects[currentProjectIndex].title}</a>
+                                        <a id="ptitle" href={projects[currentProjectIndex].deployedLink} target="_blank">{projects[currentProjectIndex].title} </a>
                                     </p>
-                                    <a href={projects[currentProjectIndex].githubLink} target="_blank" className="github-icon">
-                                        <i className="fab fa-github" style={{ fontSize: "2.5rem" }}></i>
+                                    <a id="ibackground" href={projects[currentProjectIndex].githubLink} target="_blank" className="github-icon">
+                                        <i className="fab fa-github" style={{ fontSize: "1.5rem" }}></i>
                                     </a>
                                 </div>
                             </div>

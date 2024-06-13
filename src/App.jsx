@@ -14,7 +14,10 @@ const App = () => {
 
   return (
     <div>
+      <div id="header">
       <Header />
+      <Nav />
+      </div>
       <main>
         <section id="hello">
           <h2>Cassidy Kovell</h2>
